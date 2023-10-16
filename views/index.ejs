@@ -63,31 +63,19 @@
                 let textBox = document.getElementById('textBox');
                 let name = document.getElementById('name');
                 let email = document.getElementById('email');
-                if (textBox.value === `${users[0].id}`) {
-                    name.innerHTML = `${users[0].name}`;
-                    email.innerHTML = `${users[0].email}`;
-                }
-                if (textBox.value === `${users[1].id}`) {
-                    name.innerHTML = `${users[1].name}`;
-                    email.innerHTML = `${users[1].email}`;
-                }
-                if (textBox.value === `${users[2].id}`) {
-                    name.innerHTML = `${users[2].name}`;
-                    email.innerHTML = `${users[2].email}`;
-                }
-                if (textBox.value === `${users[3].id}`) {
-                    name.innerHTML = `${users[3].name}`;
-                    email.innerHTML = `${users[3].email}`;
-                }
-                if (textBox.value === `${users[4].id}`) {
-                    name.innerHTML = `${users[4].name}`;
-                    email.innerHTML = `${users[4].email}`;
+                for (let i = 0; i < users.length; i++) {
+                    if (textBox.value === `${users[i].id}`) {
+                        name.innerHTML = `${users[i].name}`;
+                        email.innerHTML = `${users[i].email}`;
+                        return;
+                    }else{
+                        name.innerHTML = "";
+                        email.innerHTML = "";
+                    }
                 }
             }
             let submitButton = document.getElementById('submitButton');
             submitButton.addEventListener('click', alertName);
-
-        
         </script>
     </body>
 </html>
