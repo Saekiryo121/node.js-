@@ -23,9 +23,8 @@
         <label for="textBox">テキストを入力してください:</label>
         <input type="text" id="textBox" placeholder="ここにテキストを入力">
         <button id="submitButton">表示</button>
-        <p id="name">名前：</p>
-        <p id="email">e mail：</p>
-
+        <p id="name"></p>
+        <p id="email"></p>
         <script type="text/javascript">
 
             // 参考例
@@ -65,37 +64,30 @@
                 let name = document.getElementById('name');
                 let email = document.getElementById('email');
                 if (textBox.value === `${users[0].id}`) {
-                    name.insertAdjacentHTML('beforeend', `${users[0].name}`)
-                    email.insertAdjacentHTML('beforeend', `${users[0].email}`)
+                    name.innerHTML = `${users[0].name}`;
+                    email.innerHTML = `${users[0].email}`;
                 }
                 if (textBox.value === `${users[1].id}`) {
-                    name.insertAdjacentHTML('beforeend', `${users[1].name}`)
-                    email.insertAdjacentHTML('beforeend', `${users[1].email}`)
+                    name.innerHTML = `${users[1].name}`;
+                    email.innerHTML = `${users[1].email}`;
                 }
                 if (textBox.value === `${users[2].id}`) {
-                    name.insertAdjacentHTML('beforeend', `${users[2].name}`)
-                    email.insertAdjacentHTML('beforeend', `${users[2].email}`)
+                    name.innerHTML = `${users[2].name}`;
+                    email.innerHTML = `${users[2].email}`;
                 }
                 if (textBox.value === `${users[3].id}`) {
-                    name.insertAdjacentHTML('beforeend', `${users[3].name}`)
-                    email.insertAdjacentHTML('beforeend', `${users[3].email}`)
+                    name.innerHTML = `${users[3].name}`;
+                    email.innerHTML = `${users[3].email}`;
                 }
                 if (textBox.value === `${users[4].id}`) {
-                    name.insertAdjacentHTML('beforeend', `${users[4].name}`)
-                    email.insertAdjacentHTML('beforeend', `${users[4].email}`)
+                    name.innerHTML = `${users[4].name}`;
+                    email.innerHTML = `${users[4].email}`;
                 }
             }
             let submitButton = document.getElementById('submitButton');
             submitButton.addEventListener('click', alertName);
 
-            let nameTitle = document.getElementById('nameTitle')
-            let emailTitle = document.getElementById('emailTitle')
-            let changeTitle = document.getElementById('changeTitle')
-            let dereteTitle = document.getElementById('dereteTitle')
-//             <% for (let i = 0; i < bodyParser.length; i++) { %>
-//     <%= nameTitle.innerHTML = bodyParser[i].name %><br />
-// <% } %>
-// こんにちは
+        
         </script>
     </body>
 </html>
