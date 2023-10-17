@@ -6,12 +6,14 @@
     </head>
     <body>
         <table>
+            <% users.forEach(function(user) { %>
             <tr>
-                <th id="nameTitle">名前</th>
-                <th id="emailTitle">email</th>
-                <th id="changeTitle">更新</th>
-                <th id="dereteTitle">削除</th>
+                <th id="nameTitle">名前<%= user.name %></th>
+                <th id="emailTitle">email<%= user.email %></th>
+                <th><a href="/edit/<%= user.id %>">更新</a></th>
+                <th><a href="/delete/<%= user.id %>">削除</a></th>
             </tr>
+            <% }); %>
         </table>
         <!--こちらに基礎課題で言われてる内容を記述しましょう。ここから-->
         <p id="textTag"></p>
