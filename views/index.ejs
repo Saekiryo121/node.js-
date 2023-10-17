@@ -10,8 +10,8 @@
             <tr>
                 <th id="nameTitle">名前<%= user.name %></th>
                 <th id="emailTitle">email<%= user.email %></th>
-                <th><a href="/edit/"<%= user.id %>">更新</a></th>
-                <th><a href="/delete/"DBのIDをして下さい">削除</a></th>
+                <th><a href="/edit/<%= user.id %>">更新</a></th>
+                <th><a href="/delete/<%= user.id %>">削除</a></th>
             </tr>
             <% }); %>
         </table>
