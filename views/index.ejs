@@ -10,8 +10,8 @@
             <tr>
                 <th id="nameTitle">名前<%= user.name %></th>
                 <th id="emailTitle">email<%= user.email %></th>
-                <th id="changeTitle">更新</th>
-                <th id="dereteTitle">削除</th>
+                <th><a href="/edit/"<%= user.id %>">更新</a></th>
+                <th><a href="/delete/"DBのIDをして下さい">削除</a></th>
             </tr>
             <% }); %>
         </table>
@@ -89,11 +89,6 @@
             }
             let submitButton = document.getElementById('submitButton');
             submitButton.addEventListener('click', alertName);
-
-            let nameTitle = document.getElementById('nameTitle')
-            let emailTitle = document.getElementById('emailTitle')
-            let changeTitle = document.getElementById('changeTitle')
-            let dereteTitle = document.getElementById('dereteTitle')
             let users = JSON.parse('<%= JSON.stringify(users) %>'.replace(/&#34;/g, '"'));
         </script>
     </body>
