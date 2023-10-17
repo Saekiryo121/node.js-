@@ -6,12 +6,14 @@
     </head>
     <body>
         <table>
+            <% users.forEach(function(user) { %>
             <tr>
-                <th id="nameTitle">名前</th>
-                <th id="emailTitle">email</th>
+                <th id="nameTitle">名前<%= user.name %></th>
+                <th id="emailTitle">email<%= user.email %></th>
                 <th id="changeTitle">更新</th>
                 <th id="dereteTitle">削除</th>
             </tr>
+            <% }); %>
         </table>
         <!--こちらに基礎課題で言われてる内容を記述しましょう。ここから-->
         <p id="textTag"></p>
@@ -92,10 +94,7 @@
             let emailTitle = document.getElementById('emailTitle')
             let changeTitle = document.getElementById('changeTitle')
             let dereteTitle = document.getElementById('dereteTitle')
-//             <% for (let i = 0; i < bodyParser.length; i++) { %>
-//     <%= nameTitle.innerHTML = bodyParser[i].name %><br />
-// <% } %>
-// hello
+            let users = JSON.parse('<%= JSON.stringify(users) %>'.replace(/&#34;/g, '"'));
         </script>
     </body>
 </html>
